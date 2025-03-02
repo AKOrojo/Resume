@@ -307,7 +307,7 @@ const ResumeWebsite: React.FC = () => {
         {/* Header with theme toggle */}
         <header className="header">
           <div className="container header-content">
-            <h2 className="logo">AK Orojo</h2>
+            <h2 className="logo">A K Orojo</h2>
             <div className="desktop-nav">
               <nav className="navigation">
                 <ul className="nav-links">
@@ -317,15 +317,17 @@ const ResumeWebsite: React.FC = () => {
                   <li><a href="#skills" className="nav-link">Skills</a></li>
                   <li><a href="#projects" className="nav-link">Projects</a></li>
                   <li><a href="#publications" className="nav-link">Publications</a></li>
+                  <li className="theme-toggle-container">
+                    <button
+                        onClick={toggleDarkMode}
+                        className="theme-toggle"
+                        aria-label="Toggle dark mode"
+                    >
+                      {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                    </button>
+                  </li>
                 </ul>
               </nav>
-              <button
-                  onClick={toggleDarkMode}
-                  className="theme-toggle"
-                  aria-label="Toggle dark mode"
-              >
-                {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
             </div>
 
           </div>
